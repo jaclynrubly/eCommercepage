@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>eCommerce JavaScript Practice</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="cpc-viewport" data-bind="style: {display: 'block'}">
+	<div class="cpc-table-cell">
+		<div class="cpc-table-align">
+			<main role="main" class="cpc-main">
+				<div data-bind="attr: {class: data.currentShoeOption().className + ' cpc-product-imgs'}">
+					<div class="cpc-nike-tick">
+						<svg version="1.1" id="Layer_1" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-721.4 867.1 196 69.9" style="enable-background:new -721.4 867.1 196 69.9;" xml:space="preserve">
+								<path d="M-699.8,937c-5.8-0.2-10.6-1.8-14.4-4.8c-0.7-0.6-2.4-2.3-3-3c-1.5-1.9-2.5-3.8-3.2-5.8c-2.1-6.3-1-14.6,3.1-23.8
+								c3.5-7.8,9-15.5,18.5-26.3c1.4-1.6,5.6-6.2,5.6-6.2c0,0-0.2,0.4-0.5,0.9c-2.5,4.2-4.6,9-5.8,13.3c-1.9,6.8-1.6,12.6,0.7,17.2
+								c1.6,3.1,4.3,5.8,7.3,7.3c5.3,2.6,13.1,2.8,22.7,0.6c0.7-0.2,33.2-8.8,72.2-19.2c39.1-10.4,71-18.9,71.1-18.9
+								c0,0-90.8,38.9-137.9,59c-7.5,3.2-9.5,4-13,5.2C-685.2,935.7-693.3,937.2-699.8,937z"/>
+								</svg>
+					</div>
+					<div class="cpc-img-wrapper">
+						<img id="cpc-img" class="cpc-product-shoe-img animated fadeInLeft" data-bind="attr: {src: data.currentShoeOption().shoeImage}" src="https://banner2.kisspng.com/20180312/apw/kisspng-baby-transport-infant-child-physical-products-baby-stroller-5aa62ff0654972.2227882215208406884149.jpg" />
+					</div>
+					<div class="cpc-circle-container">
+						<span class="cpc-product-circle-active cpc-product-img-circle"></span>
+						<span class="cpc-product-img-circle"></span>
+						<span class="cpc-product-img-circle"></span>
+						<span class="cpc-product-img-circle"></span>
+					</div>
+				</div>
+				<div class="cpc-product-info">
+					<article class="animated fadeInRight">
+						<section class="cpc-product-header">
+							<h1 class="cpc-product-title">Product Name</h1>
+							<div class="cpc-rating-container">
+								<div class="cpc-product-rating">
+									<span class="cpc-product-star-false"></span>
+									<span class="cpc-product-star-false"></span>
+									<span class="cpc-product-star-false"></span>
+									<span class="cpc-product-star-false"></span>
+									<span class="cpc-product-star-false"></span>
+									<div class="cpc-product-rating-width" data-bind="style: {width: data.currentShoeOption().rating + '%'}">
+										<span class="cpc-product-star-true"></span>
+										<span class="cpc-product-star-true"></span>
+										<span class="cpc-product-star-true"></span>
+										<span class="cpc-product-star-true"></span>
+										<span class="cpc-product-star-true"></span>
+									</div>
+								</div>
+							</div>
+							<h3 class="cpc-product-color" data-bind="text: data.currentShoeOption().shoeColor"></h3>
+							<div>
+								<span class="cpc-product-rrp" data-bind="text: data.currentShoeOption().RRP"></span><span class="cpc-product-dp" data-bind="text: data.currentShoeOption().discountPrice"></span>
+							</div>
+						</section>
+						<section>
+							<h2 class="cpc-product-desc">Description</h2>
+							<p class="cpc-product-desc-text">A longer description goes here. Add information as you please. :)
+						</section>
+						<section class="cpc-color-section">
+							<h2 class="cpc-product-color-title">Color</h2>
+							<div data-bind="foreach: data.shoeOptions">
+								<input type="radio" name="colors" data-bind="checked: $root.functions.checkedRadio(), 
+											event: {change: function(){$root.functions.colorOptionClick($index())}}, 
+											attr: {id: inputID}" />
+								<label data-bind="attr: {for: inputID, class: labelClass}"></label>
+							</div>
+						</section>
+						<section class="cpc-size-section">
+							<h2 class="cpc-product-size-title">Dropdown</h2>
+							<select class="cpc-product-size-select">
+										<option>Option 1</option>
+										<option>Option 2</option>
+										<option>Option 3</option>
+										<option>Option 4</option>
+									</select>
+						</section>
+						<section class="cpc-qty-section">
+							<h2 class="cpc-product-qty-title">Qty</h2>
+							<select class="cpc-product-qty-select">
+										<option>(1)</option>
+										<option>(2)</option>
+										<option>(3)</option>
+										<option>(4)</option>
+									</select>
+						</section>
+						<section class="cpc-atc-share-section">
+							<a href="#" class="cpc-atc-button">Add to Cart</a>
+							<a href="#" class="cpc-sharing" data-bind="click: function() {functions.shareShoe()}"><span class="cpc-sharing-text">Share</span></a>
+						</section>
+					</article>
+				</div>
+			</main>
+		</div>
+	</div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js'></script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
